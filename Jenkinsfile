@@ -9,6 +9,13 @@ pipeline{
       }
     }
 
+  stage('Executar o docker-compose down'){
+    steps{
+      // Certifique-se de que o arquivo docker-compose.yml está no diretório correto
+      sh 'docker compose down'
+    }
+  }
+
     stage('Construção da imagem Docker'){
       steps{
         script{
@@ -28,7 +35,7 @@ pipeline{
       }
     }
 
-    stage('Executar o docker-compose'){
+    stage('Executar o docker-compose up'){
       steps{
             // Certifique-se de que o arquivo docker-compose.yml está no diretório correto
             sh 'docker compose up --build -d'
