@@ -1,7 +1,7 @@
 pipeline{
   agent any
 
-  stage{
+  stages{
     stage('Primeiro stage'){
       steps{
         ash 'echo "Primeiro stage"'
