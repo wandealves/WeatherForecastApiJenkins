@@ -2,9 +2,10 @@ pipeline{
   agent any
 
   stages{
-    stage('Primeiro stage'){
+    stage('Checkout do código'){
       steps{
-        sh 'echo "Primeiro stage"'
+        git url :'https://github.com/wandealves/WeatherForecastApiJenkins.git', branch: 'main'
+        sh 'ls -la'
       }
     }
   }
