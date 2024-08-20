@@ -28,10 +28,10 @@ pipeline{
       }
     }
 
-    stage('Limpeza'){
+    stage('Executar o docker-compose'){
       steps{
             // Certifique-se de que o arquivo docker-compose.yml está no diretório correto
-            sh 'ls -la'
+            sh 'docker compose up --build -d'
       }
     }
 

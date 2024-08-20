@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  api:
+    image: wandersonalves/weather-forecast-api:latest
+    container_name: api
+    tty: true
+    ports:
+      - "5000:5000"
+    networks:
+      - mynet
+
+networks:
+  mynet:
+    driver: bridge
