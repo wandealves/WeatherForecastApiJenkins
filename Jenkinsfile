@@ -30,10 +30,10 @@ pipeline{
 
     stage('Limpeza'){
       steps{
-        script{
-           dockerapp.clean()
-        }
+            // Certifique-se de que o arquivo docker-compose.yml está no diretório correto
+            sh 'ls -la'
       }
     }
+
   }
 }
