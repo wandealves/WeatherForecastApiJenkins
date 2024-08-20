@@ -16,6 +16,12 @@ pipeline{
     }
   }
 
+  stage('Remover a imagem latest Docker'){
+    steps{
+      sh 'docker rmi wandersonalves/weather-forecast-api:latest -f'
+    }
+  }
+
     stage('Construção da imagem Docker'){
       steps{
         script{
