@@ -12,7 +12,7 @@ pipeline{
     stage('Construção da imagem Docker'){
       steps{
         script{
-          dockerapp = docker.build("wandersonalves/weather-forecast-api:${env.BUILD_ID}", '-f ./Dockerfile .')
+          dockerapp = docker.build("wandersonalves/weather-forecast-api:${env.BUILD_ID}", ' .')
         }
       }
     }
