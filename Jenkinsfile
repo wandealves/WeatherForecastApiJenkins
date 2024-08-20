@@ -27,5 +27,13 @@ pipeline{
         }
       }
     }
+
+    stage('Limpeza'){
+      steps{
+        script{
+           dockerapp.clean()
+        }
+      }
+    }
   }
 }
